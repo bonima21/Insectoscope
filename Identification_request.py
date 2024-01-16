@@ -6,7 +6,7 @@ from flask import Flask, render_template_string
 app = Flask(__name__)
 
 # Replace 'your_api_key' with your actual API key
-api_key = '_____'
+api_key = 'oNscggVRlsj7FPz2OYvfmWKUpYXLcjII0MBBScXM2xu4uZcx8s'
 api_url = 'https://insect.kindwise.com/api/v1/'
 
 def encode_image(image_path):
@@ -41,7 +41,7 @@ def identify_insect(image_path):
 @app.route('/')
 def index():
     # Example usage:
-    image_path = '/Users/mayank/Desktop/TEST.jpeg'
+    image_path = 'C:\\Users\\vanla\\OneDrive\\Desktop\\ladybug.jpeg'
     identification_result = identify_insect(image_path)
 
     if 'error' in identification_result:
@@ -51,4 +51,4 @@ def index():
     return render_template_string('<pre>{{ result }}</pre>', result=json.dumps(identification_result, indent=4))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(debug=True, port=5004)
