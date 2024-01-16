@@ -1,4 +1,4 @@
-import os  # Add this line to import the os module
+import os
 import requests
 import json
 import base64
@@ -48,8 +48,8 @@ def index():
     if 'error' in identification_result:
         return f"Error retrieving identification result: {identification_result['error']}"
 
-    # Get the full path to the 'result.html' template in the same directory as this script
-    template_path = os.path.join(os.path.dirname(__file__), 'result.html')
+    # Use the relative path to the 'result.html' template in the "templates" folder
+    template_path = 'result.html'
 
     # Render the 'result.html' template with the identification result
     return render_template(template_path, classification=identification_result.get("result", {}).get("classification", {}))
