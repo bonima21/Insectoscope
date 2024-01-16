@@ -1,9 +1,12 @@
 import requests
 import json
 import base64
+from flask import Flask, render_template_string
+
+app = Flask(__name__)
 
 # Replace 'your_api_key' with your actual API key
-api_key = '__________________________________'
+api_key = '_____'
 api_url = 'https://insect.kindwise.com/api/v1/'
 
 def encode_image(image_path):
@@ -28,17 +31,24 @@ def identify_insect(image_path):
 
     response = requests.post(url, headers=headers, data=json.dumps(payload))
 
-    if response.status_code == 200:
+    if response.status_code == 200 or response.status_code == 201:
         return response.json()
     else:
         print(f"Error: {response.status_code}")
         print(response.text)
-        return None
+        return {'error': f"Error: {response.status_code}"}
 
-# Example usage:
-image_path = '/Users/mayank/Desktop/TEST.jpeg'
-identification_result = identify_insect(image_path)
+@app.route('/')
+def index():
+    # Example usage:
+    image_path = '/Users/mayank/Desktop/TEST.jpeg'
+    identification_result = identify_insect(image_path)
 
-if identification_result:
-    print("Identification Result:")
-    print(json.dumps(identification_result, indent=2))
+    if 'error' in identification_result:
+        return f"Error retrieving identification result: {identification_result['error']}"
+
+    # Render an HTML page with the formatted JSON
+    return render_template_string('<pre>{{ result }}</pre>', result=json.dumps(identification_result, indent=4))
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5001)
