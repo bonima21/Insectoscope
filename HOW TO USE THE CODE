@@ -1,0 +1,32 @@
+Import Statements:
+
+requests: Used for making HTTP requests.
+json: Used for handling JSON data.
+base64: Used for encoding images in base64 format.
+Flask: The web framework used for creating the web application.
+render_template_string: A function for rendering HTML templates.
+Flask Application Setup:
+
+An instance of the Flask class is created with the name app.
+API Configuration:
+
+api_key: Your API key for the insect identification service.
+api_url: The base URL for the API.
+Helper Functions:
+
+encode_image(image_path): Takes the path to an image file, reads it, encodes it in base64, and returns the encoded string.
+identify_insect(image_path): Uses the insect identification API to identify insects in the provided image. It sends a POST request with the encoded image to the API.
+Flask Route:
+
+The / route is defined with the index function.
+Inside the index function:
+An example image path is provided (image_path).
+The identify_insect function is called with the image path.
+If there's an error in the identification result, an error message is returned.
+Otherwise, the JSON result is rendered in a preformatted HTML block.
+Main Block:
+
+The Flask application is run if the script is executed directly (__name__ == '__main__').
+To use this script, make sure you have Flask and the required dependencies installed (requests). Replace 'your_api_key' with your actual API key. Additionally, adjust the image_path variable with the path to the image you want to use for insect identification.
+
+When you run the script, it will start a Flask development server, and you can access the web application by navigating to http://127.0.0.1:5002/ in your web browser.
