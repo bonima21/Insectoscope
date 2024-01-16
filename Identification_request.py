@@ -1,7 +1,8 @@
+import os  # Add this line to import the os module
 import requests
 import json
 import base64
-from flask import Flask, render_template_string
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -47,8 +48,11 @@ def index():
     if 'error' in identification_result:
         return f"Error retrieving identification result: {identification_result['error']}"
 
-    # Render an HTML page with the formatted JSON
-    return render_template_string('<pre>{{ result }}</pre>', result=json.dumps(identification_result, indent=4))
+    # Get the full path to the 'result.html' template in the same directory as this script
+    template_path = os.path.join(os.path.dirname(__file__), 'result.html')
+
+    # Render the 'result.html' template with the identification result
+    return render_template(template_path, classification=identification_result.get("result", {}).get("classification", {}))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5004)
+    app.run(debug=True, port=5001)
