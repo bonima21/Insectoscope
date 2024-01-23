@@ -29,6 +29,6 @@ if __name__ == "__main__":
     root = Tk()
 
     # Replace 'your_image_path.jpg' with the path to your image
-    app = AnnotationTool(root, 'your_image_path.jpg')
+    app = AnnotationTool(root, 'C:\\Users\\vanla\\OneDrive\\Desktop\\ladybug.jpeg')
 
     root.mainloop()
