@@ -8,36 +8,62 @@
         body {
             font-family: 'Arial', sans-serif;
             margin: 20px;
+            background-color: #f3f3f3; /* Light Gray Background */
         }
 
         h1 {
-            color: #333;
+            color: #2ecc71; /* Green Color */
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+        }
+
+        h1 img {
+            width: 80px; /* Bigger logo */
+            margin-right: 15px;
+            border-radius: 50%; /* Rounded corners */
         }
 
         .result-container {
             border: 1px solid #ccc;
             padding: 20px;
             margin-top: 20px;
-            background-color: #f9f9f9;
+            background-color: #fff; /* White Background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box Shadow for Depth */
+            border-radius: 10px; /* Rounded Corners */
         }
 
         .suggestion {
-            margin-bottom: 10px;
-            padding: 10px;
+            margin-bottom: 15px;
+            padding: 15px;
             border: 1px solid #ddd;
-            background-color: #fff;
+            background-color: #f9f9f9; /* Light Gray Background */
+            border-radius: 8px; /* Rounded Corners */
+        }
+
+        .suggestion p {
+            margin: 10px 0;
+            font-size: 18px; /* Bigger font size for 'Name', 'Probability', 'Details' */
+            font-style: italic; /* Italics for 'Name', 'Probability', 'Details' */
+        }
+
+        .result-italic {
+            font-style: italic; /* Italics for result text */
         }
     </style>
 </head>
 <body>
-    <h1>Insect Identification Result</h1>
+    <h1>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"> Insect Identification Result
+    </h1>
 
     <div class="result-container">
         {% for suggestion in classification.suggestions %}
             <div class="suggestion">
-                <p><strong>Name:</strong> {{ suggestion.name }}</p>
-                <p><strong>Probability:</strong> {{ suggestion.probability }}</p>
-                <p><strong>Details:</strong> {{ suggestion.details }}</p>
+                <p><strong>Name:</strong> <span class="result-italic">{{ suggestion.name }}</span></p>
+                <p><strong>Probability:</strong> <span class="result-italic">{{ suggestion.probability }}</span></p>
+                <p><strong>Details:</strong> <span class="result-italic">{{ suggestion.details }}</span></p>
+                <p class="result-italic">Result: {{ suggestion.result }}</p>
             </div>
         {% endfor %}
     </div>
