@@ -3,12 +3,17 @@ import requests
 import json
 import base64
 from flask import Flask, render_template
+from dotenv import load_dotenv
+
 
 app = Flask(__name__)
 
 # Replace 'your_api_key' with your actual API key
-api_key = 'oNscggVRlsj7FPz2OYvfmWKUpYXLcjII0MBBScXM2xu4uZcx8s'
 api_url = 'https://insect.kindwise.com/api/v1/'
+
+#safe keeping API key
+def configure():
+    load_dotenv()
 
 def encode_image(image_path):
     with open(image_path, 'rb') as image_file:
@@ -20,7 +25,7 @@ def identify_insect(image_path):
     url = f'{api_url}{endpoint}'
 
     headers = {
-        'Api-Key': api_key,
+        'Api-Key': os.getenv('api_key'),
         'Content-Type': 'application/json',
     }
 
@@ -41,8 +46,9 @@ def identify_insect(image_path):
 
 @app.route('/')
 def index():
+    configure()
     # Example usage:
-    image_path = 'C:\\Users\\vanla\\OneDrive\\Desktop\\ladybug.jpeg'
+    image_path = '/Users/ericesuon/Desktop/Senior Project Doc /Insectoscope 2/images/Domino_cockroach_Therea_petiveriana.jpg'
     identification_result = identify_insect(image_path)
 
     if 'error' in identification_result:
