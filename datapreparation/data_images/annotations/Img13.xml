@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data_images</folder>
+	<filename>Img13.jpg</filename>
+	<path>C:\yolo\notes\datapreparation\data_images\Img13.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>400</width>
+		<height>400</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Aphids</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>47</xmin>
+			<ymin>51</ymin>
+			<xmax>362</xmax>
+			<ymax>384</ymax>
+		</bndbox>
+	</object>
+</annotation>

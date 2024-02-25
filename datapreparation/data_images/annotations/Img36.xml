@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data_images</folder>
+	<filename>Img36.jpg</filename>
+	<path>C:\yolo\notes\datapreparation\data_images\Img36.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>750</width>
+		<height>350</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Colorado Potato Beetle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>157</xmin>
+			<ymin>35</ymin>
+			<xmax>519</xmax>
+			<ymax>300</ymax>
+		</bndbox>
+	</object>
+</annotation>

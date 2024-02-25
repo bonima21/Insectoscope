@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data_images</folder>
+	<filename>Img29.jpg</filename>
+	<path>C:\yolo\notes\datapreparation\data_images\Img29.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>499</width>
+		<height>499</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Brown Marmorated Stink Bug</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>9</xmin>
+			<ymin>13</ymin>
+			<xmax>492</xmax>
+			<ymax>465</ymax>
+		</bndbox>
+	</object>
+</annotation>

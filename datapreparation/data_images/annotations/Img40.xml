@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data_images</folder>
+	<filename>Img40.jpg</filename>
+	<path>C:\yolo\notes\datapreparation\data_images\Img40.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1024</width>
+		<height>680</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Fruit Flies</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>38</xmin>
+			<ymin>148</ymin>
+			<xmax>917</xmax>
+			<ymax>592</ymax>
+		</bndbox>
+	</object>
+</annotation>

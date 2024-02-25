@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data_images</folder>
+	<filename>Img8.jpg</filename>
+	<path>C:\yolo\notes\datapreparation\data_images\Img8.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>499</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Africanized Honey Bee</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>91</xmin>
+			<ymin>40</ymin>
+			<xmax>422</xmax>
+			<ymax>260</ymax>
+		</bndbox>
+	</object>
+</annotation>

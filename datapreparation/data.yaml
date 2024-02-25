@@ -1,0 +1,10 @@
+train: data_images/train
+val: data_images/test
+nc: 6
+names: ['Colorado Potato Beetle',
+        'Africanized Honey Bee',
+        'Brown Marmorated Stink Bug',
+        'Armyworm',
+        'Fruit Flies',
+        'Aphids'
+]

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data_images</folder>
+	<filename>Img15.jpg</filename>
+	<path>C:\yolo\notes\datapreparation\data_images\Img15.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2800</width>
+		<height>1953</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Armyworms</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>375</xmin>
+			<ymin>717</ymin>
+			<xmax>1610</xmax>
+			<ymax>1848</ymax>
+		</bndbox>
+	</object>
+</annotation>
