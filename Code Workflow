@@ -1,9 +1,0 @@
-WorkFlow Explanation
-Explanation:
-Start and End: Represent the beginning and end of the process.
-Check API Key: Ensure the availability of the API key.
-Identification Function: Define the function for identifying insects.
-API Request: Prepare the request with encoded images and other parameters.
-Send API Request: Use requests.post to send the identification request.
-Identification Result: Receive the result in JSON format.
-Display Result: Print the result to the console.
