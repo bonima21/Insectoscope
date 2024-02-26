@@ -4,57 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insect Identification Result</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 20px;
-            background-color: #f3f3f3; /* Light Gray Background */
-        }
-
-        h1 {
-            color: #2ecc71; /* Green Color */
-            display: flex;
-            align-items: center;
-            font-size: 28px;
-        }
-
-        h1 img {
-            width: 80px; /* Bigger logo */
-            margin-right: 15px;
-            border-radius: 50%; /* Rounded corners */
-        }
-
-        .result-container {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-top: 20px;
-            background-color: #fff; /* White Background */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box Shadow for Depth */
-            border-radius: 10px; /* Rounded Corners */
-        }
-
-        .suggestion {
-            margin-bottom: 15px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9; /* Light Gray Background */
-            border-radius: 8px; /* Rounded Corners */
-        }
-
-        .suggestion p {
-            margin: 10px 0;
-            font-size: 18px; /* Bigger font size for 'Name', 'Probability', 'Details' */
-            font-style: italic; /* Italics for 'Name', 'Probability', 'Details' */
-        }
-
-        .result-italic {
-            font-style: italic; /* Italics for result text */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"> Insect Identification Result
+        <img src="logo.png" alt="logo"> Insect Identification Result
+        <div class="topnav">
+            <button>Home</button>
+            <button><a href="/myinsect">My Insect</a></button>
+            <button><a href="team.html">About The Team</a></button>
+        </div>
     </h1>
 
     <div class="result-container">
@@ -66,6 +25,19 @@
                 <p class="result-italic">Result: {{ suggestion.result }}</p>
             </div>
         {% endfor %}
+    </div>
+
+    <div class="similar-insects">
+        <h2 class="section-title">Similar Insects</h2>
+        <div class="action-boxes">
+            <div class="action-box">
+                <button><a href="about.html">About</a></button>
+            </div>
+            <div class="action-box">
+                <button>Learn More</button>
+            </div>
+            
+        </div>
     </div>
 </body>
 </html>

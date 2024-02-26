@@ -7,8 +7,12 @@ class AnnotationTool:
         self.root = root
         self.root.title("Image Annotation Tool")
 
-        self.image = Image.open(image_path)
-        self.tk_image = ImageTk.PhotoImage(self.image)
+        try:
+            self.image = Image.open(image_path)
+            self.tk_image = ImageTk.PhotoImage(self.image)
+        except Exception as e:
+            print(f"Error loading image: {e}")
+            return
 
         self.canvas = Canvas(root, width=self.image.width, height=self.image.height)
         self.canvas.pack()

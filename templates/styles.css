@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f3f3f3; /* Light Gray Background */
+}
+
+h1 {
+    color: #2ecc71; /* Green Color */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align to the end */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h1 img {
+    width: 80px; /* Bigger logo */
+    margin-right: 15px;
+    border-radius: 50%; /* Rounded corners */
+}
+
+.top-buttons {
+    display: flex;
+}
+
+.top-buttons button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2ecc71; /* Green Color */
+    color: #fff; /* White Text */
+    cursor: pointer;
+}
+
+.result-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff; /* White Background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box Shadow for Depth */
+    border-radius: 10px; /* Rounded Corners */
+}
+
+.suggestion {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9; /* Light Gray Background */
+    border-radius: 8px; /* Rounded Corners */
+}
+
+.suggestion p {
+    margin: 10px 0;
+    font-size: 18px; /* Bigger font size for 'Name', 'Probability', 'Details' */
+    font-style: italic; /* Italics for 'Name', 'Probability', 'Details' */
+}
+
+.result-italic {
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 16px; /* Adjusted padding */
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
