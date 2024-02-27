@@ -60,3 +60,53 @@
     margin: 0 auto; /* Center the image horizontally */
   }
   
+ 
+
+header {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    display: flex; /* Add flexbox display */
+    justify-content: space-between; /* Add space between items */
+    align-items: center; /* Center items vertically */
+}
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px auto;
+    padding: 0 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 20px; /* Move navigation links to the right */
+}
+  
+.nav-links li {
+  margin-right: 20px;
+}
+  
+.nav-links a {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  background-color: #40b736;
+  border-radius: 4px;
+  color: white;
+}
+img {
+    width: 50px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Adjust margin as needed */
+}

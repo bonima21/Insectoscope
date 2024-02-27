@@ -1,70 +1,59 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 20px;
+    margin: 0;
     background-color: #f3f3f3; /* Light Gray Background */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Make the body take full height of the viewport */
 }
 
-h1 {
-    color: #2ecc71; /* Green Color */
+header {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 20px 0; /* Increased padding */
+    position: fixed;
+    top: 0; /* Position the header at the top */
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between; /* Align to the end */
-    font-size: 28px;
-    margin-bottom: 20px;
+    padding: 0 20px;
 }
 
-h1 img {
-    width: 80px; /* Bigger logo */
-    margin-right: 15px;
-    border-radius: 50%; /* Rounded corners */
-}
-
-.top-buttons {
+.nav-links {
+    list-style: none;
     display: flex;
 }
 
-.top-buttons button {
-    margin-left: 10px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2ecc71; /* Green Color */
-    color: #fff; /* White Text */
-    cursor: pointer;
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: #40b736;
+    border-radius: 4px;
+    color: white;
 }
 
 .result-container {
     border: 1px solid #ccc;
     padding: 20px;
-    margin-top: 20px;
     background-color: #fff; /* White Background */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box Shadow for Depth */
     border-radius: 10px; /* Rounded Corners */
+    max-width: 600px; /* Limit maximum width */
+    width: 100%; /* Ensure full width */
 }
-
-.suggestion {
-    margin-bottom: 15px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9; /* Light Gray Background */
-    border-radius: 8px; /* Rounded Corners */
-}
-
-.suggestion p {
-    margin: 10px 0;
-    font-size: 18px; /* Bigger font size for 'Name', 'Probability', 'Details' */
-    font-style: italic; /* Italics for 'Name', 'Probability', 'Details' */
-}
-
-.result-italic {
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 16px; /* Adjusted padding */
-    background-color: #333;
-    color: white;
-    font-size: 14px;
-}
-

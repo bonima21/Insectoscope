@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insect Identification Result</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Insectoscope</title>
 </head>
 <body>
-    <h1>
-        <img src="logo.png" alt="logo"> Insect Identification Result
-        <div class="topnav">
-            <button>Home</button>
-            <button><a href="/myinsect">My Insect</a></button>
-            <button><a href="team.html">About The Team</a></button>
-        </div>
-    </h1>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="result-container">
         {% for suggestion in classification.suggestions %}
@@ -25,19 +26,6 @@
                 <p class="result-italic">Result: {{ suggestion.result }}</p>
             </div>
         {% endfor %}
-    </div>
-
-    <div class="similar-insects">
-        <h2 class="section-title">Similar Insects</h2>
-        <div class="action-boxes">
-            <div class="action-box">
-                <button><a href="about.html">About</a></button>
-            </div>
-            <div class="action-box">
-                <button>Learn More</button>
-            </div>
-            
-        </div>
     </div>
 </body>
 </html>
