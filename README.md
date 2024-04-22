@@ -9,6 +9,7 @@ Welcome to the repository of Insectoscope - an innovative project aimed at autom
 Developed as a part of the senior design project, Insectoscope streamlines the process of butterfly species identification, catering to researchers, enthusiasts, and conservationists alike.
 Leveraging PyTorch and torchvision, the project offers a robust framework for image classification and inference.
 Through a user-friendly interface, Insectoscope enables seamless upload and analysis of butterfly images, providing detailed insights into species identification and confidence levels.
+
 🔧 Technologies & Tools:
 
 PyTorch
